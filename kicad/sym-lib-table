@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "interposer")(type "KiCad")(uri "${KIPRJMOD}/interposer.kicad_sym")(options "")(descr ""))
+)
