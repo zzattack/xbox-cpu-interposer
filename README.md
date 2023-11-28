@@ -4,13 +4,13 @@ In this repository schematics, layout and gerber files are shared for the recrea
 # Background
 Back in 2003 the Taiwanese company FRIENDTECH came up with methods to upgrade computer systems with faster CPUs, and the original Xbox was among the devices for which they offered an upgrade path. Details of their solution can be found in their patent application https://patents.google.com/patent/US20050282621A1/en.
 
-This work is a recreation with only slight alterations from the original.
+This work is a recreation using the same schematic, minus the poorly functioning clock reduction circuitry, and with the BGA footprint positioned to allow use of the original heatsink mounting holes.
 
 # Attribution
-This board is a recreation of this original design through intermediate clones by 'trusty', 'N64freak' and 'Kekule'. This is not an original design. The PCB is copied up to individual trace level.
+This board is a recreation of the original FRIENDTECH design. Revision 1 was a board-level clone of original design through intermediate clones by 'trusty', 'N64freak' and 'Kekule'. 
 
 # Status
-Full schematic and PCB are routed. Gerber files will be added in releases overview.
+Full schematic and PCB are routed. Gerber files are available in the Github releases overview.
 
 **PCB HAS NOT BEEN FABRICATED OR TESTED YET**
 
