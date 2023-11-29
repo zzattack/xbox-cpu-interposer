@@ -18,6 +18,6 @@ Full schematic and PCB are routed. Gerber files are available in the Github rele
 
 **PCB IS STILL IN PRODUCTION FOR TESTING **
 
-![cad](https://github.com/zzattack/xbox-cpu-interposer/assets/835006/62195739-43f7-409a-8928-03129d26c60e)
-![interposer_rev2 1_back](https://github.com/zzattack/xbox-cpu-interposer/assets/835006/f784d4ab-84d1-4a9d-b923-6ed611c722fd)
 ![interposer_rev2 1_front](https://github.com/zzattack/xbox-cpu-interposer/assets/835006/fd0323cb-02e2-4d74-91b7-aae525522ada)
+![interposer_rev2 1_back](https://github.com/zzattack/xbox-cpu-interposer/assets/835006/f784d4ab-84d1-4a9d-b923-6ed611c722fd)
+![cad](https://github.com/zzattack/xbox-cpu-interposer/assets/835006/62195739-43f7-409a-8928-03129d26c60e)
