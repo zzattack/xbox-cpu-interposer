@@ -2330,10 +2330,6 @@
     (stroke (width 0) (type default))
     (uuid 09a71aa7-02b0-4ba8-a080-5e66872b2fb3)
   )
-  (wire (pts (xy 76.2 147.32) (xy 78.74 147.32))
-    (stroke (width 0) (type default))
-    (uuid 0a063cc1-e311-4325-b9c7-5af37907b3d6)
-  )
   (wire (pts (xy 76.2 50.8) (xy 81.28 50.8))
     (stroke (width 0) (type default))
     (uuid 0a447950-368f-4ceb-bc21-39bab7015c02)
@@ -2486,10 +2482,6 @@
     (stroke (width 0) (type default))
     (uuid 26b7b588-efd7-47b6-a678-1be69acba6e7)
   )
-  (wire (pts (xy 86.36 147.32) (xy 88.9 147.32))
-    (stroke (width 0) (type default))
-    (uuid 26dff598-6eaf-4eca-a76a-c00bb0658a2b)
-  )
   (wire (pts (xy 121.92 113.03) (xy 121.92 114.3))
     (stroke (width 0) (type default))
     (uuid 2786c1b2-7af2-4e6f-94cf-f3013dfe01f1)
@@ -2617,6 +2609,10 @@
   (wire (pts (xy 187.96 62.23) (xy 187.96 63.5))
     (stroke (width 0) (type default))
     (uuid 3e0b3510-8df1-4ed2-b74b-123f4d1e6fb0)
+  )
+  (wire (pts (xy 76.2 147.32) (xy 81.28 147.32))
+    (stroke (width 0) (type default))
+    (uuid 3ed5e94b-72a2-45f8-bc2d-d9314cb524fa)
   )
   (wire (pts (xy 217.17 30.099) (xy 217.17 38.1))
     (stroke (width 0) (type default))
@@ -4556,10 +4552,10 @@
       (effects (font (size 0.7 0.7)) (justify right) hide)
     )
   )
-  (global_label "RESET#" (shape input) (at 88.9 147.32 0) (fields_autoplaced)
+  (global_label "RESET#" (shape input) (at 81.28 147.32 0) (fields_autoplaced)
     (effects (font (size 0.4 0.4)) (justify left))
     (uuid c3b006b3-4572-4201-8746-c4806fd2bfb7)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 91.8695 147.295 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 84.2495 147.295 0)
       (effects (font (size 0.4 0.4)) (justify left) hide)
     )
   )
@@ -4863,7 +4859,7 @@
   (symbol (lib_id "Device:C") (at 129.54 128.27 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 0b43014a-6812-4409-b98e-43868ef11852)
-    (property "Reference" "C22" (at 126.492 125.984 0)
+    (property "Reference" "C21" (at 126.492 125.984 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "0.1uF" (at 123.952 130.556 0)
@@ -4880,7 +4876,7 @@
     (instances
       (project "interposer"
         (path "/ec820575-024d-42cb-bfa5-b230176ba695/cfd51080-4f1a-4877-b9f2-49ef7842424e"
-          (reference "C22") (unit 1)
+          (reference "C21") (unit 1)
         )
       )
     )
@@ -4915,7 +4911,7 @@
   (symbol (lib_id "Device:C") (at 152.4 128.27 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 12ca5533-eee4-43d2-a3a6-f70ae824d713)
-    (property "Reference" "C25" (at 149.352 125.984 0)
+    (property "Reference" "C24" (at 149.352 125.984 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "0.1uF" (at 146.812 130.556 0)
@@ -4932,7 +4928,7 @@
     (instances
       (project "interposer"
         (path "/ec820575-024d-42cb-bfa5-b230176ba695/cfd51080-4f1a-4877-b9f2-49ef7842424e"
-          (reference "C25") (unit 1)
+          (reference "C24") (unit 1)
         )
       )
     )
@@ -4973,7 +4969,7 @@
   (symbol (lib_id "Device:R") (at 27.94 144.78 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 1c9bbc5c-514a-4854-ba8a-1b20b8bd3cee)
-    (property "Reference" "R2" (at 27.686 142.494 90)
+    (property "Reference" "R4" (at 27.686 142.494 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "10R" (at 27.94 147.066 90)
@@ -4990,7 +4986,7 @@
     (instances
       (project "interposer"
         (path "/ec820575-024d-42cb-bfa5-b230176ba695/cfd51080-4f1a-4877-b9f2-49ef7842424e"
-          (reference "R2") (unit 1)
+          (reference "R4") (unit 1)
         )
       )
     )
@@ -5379,7 +5375,7 @@
   (symbol (lib_id "Device:C") (at 182.88 128.27 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 24b1b806-05f3-4c92-94e1-a8107b1cc473)
-    (property "Reference" "C34" (at 179.832 125.984 0)
+    (property "Reference" "C33" (at 179.832 125.984 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "0.1uF" (at 177.292 130.556 0)
@@ -5396,7 +5392,7 @@
     (instances
       (project "interposer"
         (path "/ec820575-024d-42cb-bfa5-b230176ba695/cfd51080-4f1a-4877-b9f2-49ef7842424e"
-          (reference "C34") (unit 1)
+          (reference "C33") (unit 1)
         )
       )
     )
@@ -5405,7 +5401,7 @@
   (symbol (lib_id "Device:C") (at 175.26 128.27 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 4063f226-e61e-4ddb-b299-16929f13ef2c)
-    (property "Reference" "C28" (at 172.212 125.984 0)
+    (property "Reference" "C34" (at 172.212 125.984 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "0.1uF" (at 169.672 130.556 0)
@@ -5422,7 +5418,7 @@
     (instances
       (project "interposer"
         (path "/ec820575-024d-42cb-bfa5-b230176ba695/cfd51080-4f1a-4877-b9f2-49ef7842424e"
-          (reference "C28") (unit 1)
+          (reference "C34") (unit 1)
         )
       )
     )
@@ -5457,7 +5453,7 @@
   (symbol (lib_id "Device:C") (at 129.54 149.86 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 607a9801-77f0-4cde-a1a9-d2aabe2963a3)
-    (property "Reference" "C5" (at 126.492 147.574 0)
+    (property "Reference" "C6" (at 126.492 147.574 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "4.7uF" (at 123.952 152.146 0)
@@ -5474,7 +5470,7 @@
     (instances
       (project "interposer"
         (path "/ec820575-024d-42cb-bfa5-b230176ba695/cfd51080-4f1a-4877-b9f2-49ef7842424e"
-          (reference "C5") (unit 1)
+          (reference "C6") (unit 1)
         )
       )
     )
@@ -5559,7 +5555,7 @@
   (symbol (lib_id "Device:C") (at 137.16 128.27 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 749b3495-0944-433f-aca4-675179a66fe2)
-    (property "Reference" "C23" (at 134.112 125.984 0)
+    (property "Reference" "C22" (at 134.112 125.984 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "0.1uF" (at 131.572 130.556 0)
@@ -5576,7 +5572,7 @@
     (instances
       (project "interposer"
         (path "/ec820575-024d-42cb-bfa5-b230176ba695/cfd51080-4f1a-4877-b9f2-49ef7842424e"
-          (reference "C23") (unit 1)
+          (reference "C22") (unit 1)
         )
       )
     )
@@ -5688,7 +5684,7 @@
   (symbol (lib_id "Device:C") (at 144.78 128.27 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 800c0216-c802-4b8c-aa7f-ede3c6ca637c)
-    (property "Reference" "C24" (at 141.732 125.984 0)
+    (property "Reference" "C23" (at 141.732 125.984 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "0.1uF" (at 139.192 130.556 0)
@@ -5705,7 +5701,7 @@
     (instances
       (project "interposer"
         (path "/ec820575-024d-42cb-bfa5-b230176ba695/cfd51080-4f1a-4877-b9f2-49ef7842424e"
-          (reference "C24") (unit 1)
+          (reference "C23") (unit 1)
         )
       )
     )
@@ -5714,7 +5710,7 @@
   (symbol (lib_id "Device:C") (at 121.92 128.27 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 83045223-cb49-4975-b79c-dc6969df81cf)
-    (property "Reference" "C21" (at 118.872 125.984 0)
+    (property "Reference" "C20" (at 118.872 125.984 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "0.1uF" (at 116.332 130.556 0)
@@ -5734,7 +5730,7 @@
     (instances
       (project "interposer"
         (path "/ec820575-024d-42cb-bfa5-b230176ba695/cfd51080-4f1a-4877-b9f2-49ef7842424e"
-          (reference "C21") (unit 1)
+          (reference "C20") (unit 1)
         )
       )
     )
@@ -5769,7 +5765,7 @@
   (symbol (lib_id "Device:C") (at 190.5 149.86 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 87e7ff81-70a8-47c8-87c4-cd3cc7af1706)
-    (property "Reference" "C33" (at 187.452 147.574 0)
+    (property "Reference" "C32" (at 187.452 147.574 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "4.7uF" (at 184.912 152.146 0)
@@ -5786,7 +5782,7 @@
     (instances
       (project "interposer"
         (path "/ec820575-024d-42cb-bfa5-b230176ba695/cfd51080-4f1a-4877-b9f2-49ef7842424e"
-          (reference "C33") (unit 1)
+          (reference "C32") (unit 1)
         )
       )
     )
@@ -5795,7 +5791,7 @@
   (symbol (lib_id "Device:R") (at 139.7 35.56 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 88c8ad35-4130-42a2-8a80-771fdfce8371)
-    (property "Reference" "R1" (at 141.732 33.782 90)
+    (property "Reference" "R2" (at 141.732 33.782 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "15R" (at 137.668 35.814 90)
@@ -5812,7 +5808,7 @@
     (instances
       (project "interposer"
         (path "/ec820575-024d-42cb-bfa5-b230176ba695/cfd51080-4f1a-4877-b9f2-49ef7842424e"
-          (reference "R1") (unit 1)
+          (reference "R2") (unit 1)
         )
       )
     )
@@ -5846,7 +5842,7 @@
   (symbol (lib_id "Device:C") (at 176.53 77.47 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 8c23cb60-74a4-4dc7-a107-a61fc3f88cff)
-    (property "Reference" "C20" (at 173.482 75.184 0)
+    (property "Reference" "C25" (at 173.482 75.184 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "0.1uF" (at 170.942 79.756 0)
@@ -5866,7 +5862,7 @@
     (instances
       (project "interposer"
         (path "/ec820575-024d-42cb-bfa5-b230176ba695/cfd51080-4f1a-4877-b9f2-49ef7842424e"
-          (reference "C20") (unit 1)
+          (reference "C25") (unit 1)
         )
       )
     )
@@ -5907,7 +5903,7 @@
   (symbol (lib_id "Device:C") (at 115.57 62.23 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 9246c53b-d2b5-4c8d-b7bb-dfc8f1df8fd0)
-    (property "Reference" "C18" (at 112.522 59.944 0)
+    (property "Reference" "C17" (at 112.522 59.944 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1uF" (at 109.982 64.516 0)
@@ -5924,7 +5920,7 @@
     (instances
       (project "interposer"
         (path "/ec820575-024d-42cb-bfa5-b230176ba695/cfd51080-4f1a-4877-b9f2-49ef7842424e"
-          (reference "C18") (unit 1)
+          (reference "C17") (unit 1)
         )
       )
     )
@@ -5933,7 +5929,7 @@
   (symbol (lib_id "Device:C") (at 167.64 128.27 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 92b8419b-4c5d-4c1a-8167-17113fe6ba93)
-    (property "Reference" "C27" (at 164.592 125.984 0)
+    (property "Reference" "C30" (at 164.592 125.984 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "0.1uF" (at 162.052 130.556 0)
@@ -5950,7 +5946,7 @@
     (instances
       (project "interposer"
         (path "/ec820575-024d-42cb-bfa5-b230176ba695/cfd51080-4f1a-4877-b9f2-49ef7842424e"
-          (reference "C27") (unit 1)
+          (reference "C30") (unit 1)
         )
       )
     )
@@ -6040,7 +6036,7 @@
   (symbol (lib_id "Device:C") (at 196.85 149.86 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 9fe1b4bb-e0d9-4f19-83d2-53eaa2cc4428)
-    (property "Reference" "C32" (at 193.802 147.574 0)
+    (property "Reference" "C31" (at 193.802 147.574 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "4.7uF" (at 191.262 152.146 0)
@@ -6057,7 +6053,7 @@
     (instances
       (project "interposer"
         (path "/ec820575-024d-42cb-bfa5-b230176ba695/cfd51080-4f1a-4877-b9f2-49ef7842424e"
-          (reference "C32") (unit 1)
+          (reference "C31") (unit 1)
         )
       )
     )
@@ -6091,7 +6087,7 @@
   (symbol (lib_id "Device:R") (at 33.02 124.46 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid a8eae9b2-ac5e-459d-8e01-cbb5bb4082fd)
-    (property "Reference" "R4" (at 32.766 122.174 90)
+    (property "Reference" "R3" (at 32.766 122.174 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "10R" (at 33.02 126.746 90)
@@ -6108,7 +6104,7 @@
     (instances
       (project "interposer"
         (path "/ec820575-024d-42cb-bfa5-b230176ba695/cfd51080-4f1a-4877-b9f2-49ef7842424e"
-          (reference "R4") (unit 1)
+          (reference "R3") (unit 1)
         )
       )
     )
@@ -6297,7 +6293,7 @@
   (symbol (lib_id "Device:R") (at 107.95 57.15 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d0923431-d676-4c29-8106-04916d3f1593)
-    (property "Reference" "R5" (at 108.204 59.436 90)
+    (property "Reference" "R1" (at 108.204 59.436 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "1k" (at 107.95 54.864 90)
@@ -6314,7 +6310,7 @@
     (instances
       (project "interposer"
         (path "/ec820575-024d-42cb-bfa5-b230176ba695/cfd51080-4f1a-4877-b9f2-49ef7842424e"
-          (reference "R5") (unit 1)
+          (reference "R1") (unit 1)
         )
       )
     )
@@ -6348,7 +6344,7 @@
   (symbol (lib_id "Device:C") (at 175.26 109.22 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d76a1b22-78b9-4c3b-9f53-f2d86b1dffd1)
-    (property "Reference" "C29" (at 172.212 106.934 0)
+    (property "Reference" "C27" (at 172.212 106.934 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "0.1uF" (at 169.672 111.506 0)
@@ -6365,7 +6361,7 @@
     (instances
       (project "interposer"
         (path "/ec820575-024d-42cb-bfa5-b230176ba695/cfd51080-4f1a-4877-b9f2-49ef7842424e"
-          (reference "C29") (unit 1)
+          (reference "C27") (unit 1)
         )
       )
     )
@@ -6374,7 +6370,7 @@
   (symbol (lib_id "Device:C") (at 182.88 149.86 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid e0147442-030d-485b-aae4-39480ff266bb)
-    (property "Reference" "C30" (at 179.832 147.574 0)
+    (property "Reference" "C28" (at 179.832 147.574 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "4.7uF" (at 177.292 152.146 0)
@@ -6391,7 +6387,7 @@
     (instances
       (project "interposer"
         (path "/ec820575-024d-42cb-bfa5-b230176ba695/cfd51080-4f1a-4877-b9f2-49ef7842424e"
-          (reference "C30") (unit 1)
+          (reference "C28") (unit 1)
         )
       )
     )
@@ -6400,7 +6396,7 @@
   (symbol (lib_id "Device:C") (at 195.58 59.69 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid e08d11d5-658e-4cca-853f-72df73d14278)
-    (property "Reference" "C17" (at 192.532 57.404 0)
+    (property "Reference" "C18" (at 192.532 57.404 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "0.1uF" (at 189.992 61.976 0)
@@ -6417,7 +6413,7 @@
     (instances
       (project "interposer"
         (path "/ec820575-024d-42cb-bfa5-b230176ba695/cfd51080-4f1a-4877-b9f2-49ef7842424e"
-          (reference "C17") (unit 1)
+          (reference "C18") (unit 1)
         )
       )
     )
@@ -6474,36 +6470,10 @@
     )
   )
 
-  (symbol (lib_id "Device:R") (at 82.55 147.32 270) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid ef285275-31f4-4fa9-b7a0-182f7d4fac81)
-    (property "Reference" "R3" (at 84.328 149.352 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "0R" (at 82.296 145.288 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 82.55 145.542 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 82.55 147.32 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 0ffd99ad-9ce5-4cd6-9e16-8b9b6074e383))
-    (pin "2" (uuid 8a52a63a-0dbe-4280-8de0-d73fd84aee56))
-    (instances
-      (project "interposer"
-        (path "/ec820575-024d-42cb-bfa5-b230176ba695/cfd51080-4f1a-4877-b9f2-49ef7842424e"
-          (reference "R3") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "Device:C") (at 203.2 59.69 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f30312c9-d54e-461f-ad49-72845d7c3c14)
-    (property "Reference" "C6" (at 200.152 57.404 0)
+    (property "Reference" "C5" (at 200.152 57.404 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "0.1uF" (at 197.612 61.976 0)
@@ -6520,7 +6490,7 @@
     (instances
       (project "interposer"
         (path "/ec820575-024d-42cb-bfa5-b230176ba695/cfd51080-4f1a-4877-b9f2-49ef7842424e"
-          (reference "C6") (unit 1)
+          (reference "C5") (unit 1)
         )
       )
     )
@@ -6555,7 +6525,7 @@
   (symbol (lib_id "Device:C") (at 167.64 109.22 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f8cef74b-81d7-4965-ba24-607ea69c9764)
-    (property "Reference" "C31" (at 164.592 106.934 0)
+    (property "Reference" "C29" (at 164.592 106.934 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "0.1uF" (at 162.052 111.506 0)
@@ -6572,7 +6542,7 @@
     (instances
       (project "interposer"
         (path "/ec820575-024d-42cb-bfa5-b230176ba695/cfd51080-4f1a-4877-b9f2-49ef7842424e"
-          (reference "C31") (unit 1)
+          (reference "C29") (unit 1)
         )
       )
     )
