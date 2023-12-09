@@ -910,10 +910,6 @@
       )
       (pin power_in line (at -20.32 21.59 90) (length 5.08) hide
         (name "GND" (effects (font (size 0.5 0.5))))
-        (number "AF36" (effects (font (size 0.5 0.5))))
-      )
-      (pin power_in line (at -20.32 21.59 90) (length 5.08) hide
-        (name "GND" (effects (font (size 0.5 0.5))))
         (number "AG5" (effects (font (size 0.5 0.5))))
       )
       (pin power_in line (at -20.32 21.59 90) (length 5.08) hide
@@ -984,10 +980,6 @@
         (name "VCORE" (effects (font (size 0.5 0.5))))
         (number "AJ29" (effects (font (size 0.5 0.5))))
       )
-      (pin power_in line (at -20.32 21.59 90) (length 5.08) hide
-        (name "GND" (effects (font (size 0.5 0.5))))
-        (number "AJ3" (effects (font (size 0.5 0.5))))
-      )
       (pin power_in line (at -27.94 52.07 0) (length 5.08) hide
         (name "VCORE" (effects (font (size 0.5 0.5))))
         (number "AJ5" (effects (font (size 0.5 0.5))))
@@ -1024,17 +1016,9 @@
         (name "VCORE" (effects (font (size 0.5 0.5))))
         (number "AK34" (effects (font (size 0.5 0.5))))
       )
-      (pin power_in line (at -20.32 21.59 90) (length 5.08) hide
-        (name "GND" (effects (font (size 0.5 0.5))))
-        (number "AK36" (effects (font (size 0.5 0.5))))
-      )
       (pin unspecified line (at -27.94 43.18 0) (length 5.08)
         (name "VTT_PWRGOOD" (effects (font (size 0.5 0.5))))
         (number "AK4" (effects (font (size 0.5 0.5))))
-      )
-      (pin power_in line (at -20.32 21.59 90) (length 5.08) hide
-        (name "GND" (effects (font (size 0.5 0.5))))
-        (number "AL1" (effects (font (size 0.5 0.5))))
       )
       (pin bidirectional line (at 3.81 21.59 90) (length 5.08)
         (name "~{AP0}" (effects (font (size 0.5 0.5))))
@@ -1532,10 +1516,6 @@
         (name "VTT" (effects (font (size 0.5 0.5))))
         (number "U37" (effects (font (size 0.5 0.5))))
       )
-      (pin power_in line (at -27.94 49.53 0) (length 5.08) hide
-        (name "VTT" (effects (font (size 0.5 0.5))))
-        (number "X34" (effects (font (size 0.5 0.5))))
-      )
       (pin power_in line (at -20.32 21.59 90) (length 5.08) hide
         (name "GND" (effects (font (size 0.5 0.5))))
         (number "U5" (effects (font (size 0.5 0.5))))
@@ -1571,6 +1551,10 @@
       (pin power_in line (at -20.32 21.59 90) (length 5.08) hide
         (name "GND" (effects (font (size 0.5 0.5))))
         (number "X32" (effects (font (size 0.5 0.5))))
+      )
+      (pin power_in line (at -27.94 49.53 0) (length 5.08) hide
+        (name "VTT" (effects (font (size 0.5 0.5))))
+        (number "X34" (effects (font (size 0.5 0.5))))
       )
       (pin power_in line (at -20.32 21.59 90) (length 5.08) hide
         (name "GND" (effects (font (size 0.5 0.5))))
@@ -3308,8 +3292,8 @@
         (name "VCC" (effects (font (size 0.5 0.5))))
         (number "N9" (effects (font (size 0.5 0.5))))
       )
-      (pin power_in line (at 11.43 16.51 180) (length 5.08) hide
-        (name "VCCT" (effects (font (size 0.5 0.5))))
+      (pin power_in line (at 11.43 20.32 180) (length 5.08) hide
+        (name "VCC" (effects (font (size 0.5 0.5))))
         (number "P1" (effects (font (size 0.5 0.5))))
       )
       (pin power_in line (at 11.43 20.32 180) (length 5.08) hide

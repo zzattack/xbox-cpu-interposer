@@ -1743,8 +1743,8 @@
           (name "VCC" (effects (font (size 0.5 0.5))))
           (number "N9" (effects (font (size 0.5 0.5))))
         )
-        (pin power_in line (at 11.43 16.51 180) (length 5.08) hide
-          (name "VCCT" (effects (font (size 0.5 0.5))))
+        (pin power_in line (at 11.43 20.32 180) (length 5.08) hide
+          (name "VCC" (effects (font (size 0.5 0.5))))
           (number "P1" (effects (font (size 0.5 0.5))))
         )
         (pin power_in line (at 11.43 20.32 180) (length 5.08) hide
@@ -3995,7 +3995,7 @@
   (symbol (lib_id "Device:R") (at 130.81 136.525 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 08fe1328-90ab-40aa-8256-e0591d0e4f07)
-    (property "Reference" "R3" (at 130.556 134.239 90)
+    (property "Reference" "R6" (at 130.556 134.239 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "10k" (at 130.81 138.811 90)
@@ -4011,9 +4011,6 @@
     (pin "2" (uuid b2456874-2966-426b-b33b-7b988ece41be))
     (instances
       (project "interposer"
-        (path "/ec820575-024d-42cb-bfa5-b230176ba695/cfd51080-4f1a-4877-b9f2-49ef7842424e"
-          (reference "R3") (unit 1)
-        )
         (path "/ec820575-024d-42cb-bfa5-b230176ba695/91f8d4ec-ae32-44bd-8462-8bb796df34a6"
           (reference "R6") (unit 1)
         )
@@ -4049,7 +4046,7 @@
   (symbol (lib_id "Device:R") (at 141.605 136.525 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 356491df-4847-4e9c-8fc7-7696d9f4e755)
-    (property "Reference" "R3" (at 141.351 134.239 90)
+    (property "Reference" "R7" (at 141.351 134.239 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "10k" (at 141.605 138.811 90)
@@ -4065,9 +4062,6 @@
     (pin "2" (uuid c8246f26-a12b-4e60-9b65-06761f0fb913))
     (instances
       (project "interposer"
-        (path "/ec820575-024d-42cb-bfa5-b230176ba695/cfd51080-4f1a-4877-b9f2-49ef7842424e"
-          (reference "R3") (unit 1)
-        )
         (path "/ec820575-024d-42cb-bfa5-b230176ba695/91f8d4ec-ae32-44bd-8462-8bb796df34a6"
           (reference "R7") (unit 1)
         )
@@ -4593,7 +4587,7 @@
   (symbol (lib_id "Device:R") (at 120.015 136.525 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 8036ba2b-0ea2-4568-ae91-3564b94d1ad8)
-    (property "Reference" "R3" (at 119.761 134.239 90)
+    (property "Reference" "R5" (at 119.761 134.239 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "10k" (at 120.015 138.811 90)
@@ -4609,9 +4603,6 @@
     (pin "2" (uuid 00b12cd4-eaff-4a8d-a988-7f92ddc5517b))
     (instances
       (project "interposer"
-        (path "/ec820575-024d-42cb-bfa5-b230176ba695/cfd51080-4f1a-4877-b9f2-49ef7842424e"
-          (reference "R3") (unit 1)
-        )
         (path "/ec820575-024d-42cb-bfa5-b230176ba695/91f8d4ec-ae32-44bd-8462-8bb796df34a6"
           (reference "R5") (unit 1)
         )

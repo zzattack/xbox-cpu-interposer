@@ -114,7 +114,7 @@
         "allow_blind_buried_vias": false,
         "allow_microvias": false,
         "max_error": 0.005,
-        "min_clearance": 0.1016,
+        "min_clearance": 0.127,
         "min_connection": 0.0,
         "min_copper_edge_clearance": 0.19999999999999998,
         "min_hole_clearance": 0.19999999999999998,
@@ -126,7 +126,7 @@
         "min_text_height": 0.7,
         "min_text_thickness": 0.08,
         "min_through_hole_diameter": 0.3,
-        "min_track_width": 0.1016,
+        "min_track_width": 0.127,
         "min_via_annular_width": 0.049999999999999996,
         "min_via_diameter": 0.3,
         "solder_mask_clearance": 0.0,
@@ -176,7 +176,8 @@
       ],
       "track_widths": [
         0.0,
-        0.1016,
+        0.0,
+        0.127,
         0.508
       ],
       "via_dimensions": [
@@ -185,8 +186,8 @@
           "drill": 0.0
         },
         {
-          "diameter": 0.3,
-          "drill": 0.2
+          "diameter": 0.4,
+          "drill": 0.3
         },
         {
           "diameter": 0.508,
@@ -440,7 +441,7 @@
         "name": "Default",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.1016,
+        "track_width": 0.127,
         "via_diameter": 0.4,
         "via_drill": 0.3,
         "wire_width": 4
@@ -457,7 +458,7 @@
         "name": "AGTL",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.1016,
+        "track_width": 0.127,
         "via_diameter": 0.4,
         "via_drill": 0.3,
         "wire_width": 4
