@@ -1,0 +1,1 @@
+Order as 0.2mm thick stainless steel
