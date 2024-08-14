@@ -1,32 +1,32 @@
 {
   "board": {
-    "active_layer": 44,
+    "active_layer": 0,
     "active_layer_preset": "",
     "auto_track_width": false,
     "hidden_netclasses": [],
     "hidden_nets": [],
-    "high_contrast_mode": 0,
+    "high_contrast_mode": 1,
     "net_color_mode": 1,
     "opacity": {
       "images": 0.0,
       "pads": 0.8299999833106995,
-      "tracks": 1.0,
+      "tracks": 0.699999988079071,
       "vias": 0.3700000047683716,
       "zones": 0.38999998569488525
     },
     "ratsnest_display_mode": 0,
     "selection_filter": {
-      "dimensions": true,
+      "dimensions": false,
       "footprints": true,
       "graphics": true,
       "keepouts": true,
       "lockedItems": true,
       "otherItems": true,
-      "pads": true,
-      "text": true,
-      "tracks": true,
-      "vias": true,
-      "zones": true
+      "pads": false,
+      "text": false,
+      "tracks": false,
+      "vias": false,
+      "zones": false
     },
     "visible_items": [
       0,
@@ -35,7 +35,6 @@
       3,
       4,
       5,
-      7,
       9,
       10,
       11,
@@ -64,8 +63,14 @@
       37,
       40
     ],
-    "visible_layers": "0001010_00000008",
+    "visible_layers": "0001138_8000000d",
     "zone_display_mode": 0
+  },
+  "git": {
+    "repo_password": "",
+    "repo_type": "",
+    "repo_username": "",
+    "ssh_key": ""
   },
   "meta": {
     "filename": "interposer.kicad_prl",

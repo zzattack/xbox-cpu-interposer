@@ -1,54 +1,94 @@
-(kicad_sch (version 20230121) (generator eeschema)
-
-  (uuid ec820575-024d-42cb-bfa5-b230176ba695)
-
-  (paper "A4")
-
-  (title_block
-    (title "XBOX CPU inteposer")
-    (date "2023-11-23")
-    (rev "1.0")
-  )
-
-  (lib_symbols
-  )
-
-
-  (sheet (at 33.274 76.581) (size 44.45 22.86) (fields_autoplaced)
-    (stroke (width 0.1524) (type solid))
-    (fill (color 0 0 0 0.0000))
-    (uuid 91f8d4ec-ae32-44bd-8462-8bb796df34a6)
-    (property "Sheetname" "xbox_ubga2" (at 33.274 75.8694 0)
-      (effects (font (size 1.27 1.27)) (justify left bottom))
-    )
-    (property "Sheetfile" "xbox_ubga2.kicad_sch" (at 33.274 100.0256 0)
-      (effects (font (size 1.27 1.27)) (justify left top))
-    )
-    (instances
-      (project "interposer"
-        (path "/ec820575-024d-42cb-bfa5-b230176ba695" (page "2"))
-      )
-    )
-  )
-
-  (sheet (at 33.528 40.005) (size 46.99 28.956) (fields_autoplaced)
-    (stroke (width 0.1524) (type solid))
-    (fill (color 0 0 0 0.0000))
-    (uuid cfd51080-4f1a-4877-b9f2-49ef7842424e)
-    (property "Sheetname" "interposer_pga370" (at 33.528 39.2934 0)
-      (effects (font (size 1.27 1.27)) (justify left bottom))
-    )
-    (property "Sheetfile" "interposer_pga370.kicad_sch" (at 33.528 69.5456 0)
-      (effects (font (size 1.27 1.27)) (justify left top))
-    )
-    (instances
-      (project "interposer"
-        (path "/ec820575-024d-42cb-bfa5-b230176ba695" (page "3"))
-      )
-    )
-  )
-
-  (sheet_instances
-    (path "/" (page "1"))
-  )
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "ec820575-024d-42cb-bfa5-b230176ba695")
+	(paper "A4")
+	(title_block
+		(title "XBOX CPU inteposer")
+		(date "2023-11-23")
+		(rev "1.0")
+	)
+	(lib_symbols)
+	(sheet
+		(at 33.274 76.581)
+		(size 44.45 22.86)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "91f8d4ec-ae32-44bd-8462-8bb796df34a6")
+		(property "Sheetname" "xbox_ubga2"
+			(at 33.274 75.8694 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "xbox_ubga2.kicad_sch"
+			(at 33.274 100.0256 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "interposer"
+				(path "/ec820575-024d-42cb-bfa5-b230176ba695"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 33.528 40.005)
+		(size 46.99 28.956)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "cfd51080-4f1a-4877-b9f2-49ef7842424e")
+		(property "Sheetname" "interposer_pga370"
+			(at 33.528 39.2934 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "interposer_pga370.kicad_sch"
+			(at 33.528 69.5456 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "interposer"
+				(path "/ec820575-024d-42cb-bfa5-b230176ba695"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
 )

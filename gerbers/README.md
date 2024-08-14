@@ -1,7 +1,7 @@
 # Ordering information
 
 PCB specifications:
- * 6 layer, 49.5x49.3mm
+ * 6 layer, 49.5x48.6mm
  * Board thickness: 1.6mm
  * Min track size: 5 mil
  * Min clearance: 5 mil
