@@ -15,9 +15,9 @@ Installation guide will be added later.
 
 # Status
 Full schematic and PCB are routed. Gerber files are available in the Github releases overview.
-Revision 3.2 is tested and its working was verified by johnny4139.
+Revision 3.2 and onwards should be working correctly.
 Prior revisions require PCB modifications and should be avoided.
 
-![rev32](https://github.com/zzattack/xbox-cpu-interposer/assets/835006/f559f9d4-ce14-4f04-a626-3b910d975016)
-![rev32_front](https://github.com/zzattack/xbox-cpu-interposer/assets/835006/302c93cc-a5f9-4ede-8e5e-16e07123c849)
-![rev32_back](https://github.com/zzattack/xbox-cpu-interposer/assets/835006/edec5145-ddb4-47ac-8176-b343b06281df)
+![rev33](https://github.com/user-attachments/assets/d8233981-2106-4230-9c0e-d044785e6a47)
+![rev33_front](https://github.com/user-attachments/assets/05504527-243f-45ee-9fd0-078bd46bd519)
+![rev33_back](https://github.com/user-attachments/assets/97cba066-3ce7-4e8c-a13a-351d06dafa6e)
