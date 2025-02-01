@@ -1,11 +1,62 @@
-# THIS IS A WORK IN PROGRESS. INCOMPLETE. NO PROOFREADING DONE YET.
-
 # XBOX CPU upgrade guide
 Applying CPU upgrades to the original Xbox has been done since 2004. Yet, up until recently, resources and information to carry out this procedure have been hard to come by.
 This guide aims to gather relevant information, tips and tricks all in one place to serve as a reference guide for performing this procedure properly, successfully, and repeatably.
 Ideally, even newcomers should succeed on their first try.
 
-# Tools
+
+Table of Contents
+=================
+* [XBOX CPU upgrade guide](#xbox-cpu-upgrade-guide)
+* [Tools and parts](#tools-and-parts)
+* [Motherboard preparations](#motherboard-preparations)
+   * [Removal from case](#removal-from-case)
+   * [Heatsink removal](#heatsink-removal)
+      * [Heatsink bracket removal](#heatsink-bracket-removal)
+   * [Thermal paste cleaning](#thermal-paste-cleaning)
+   * [Ultrasonic cleaning considerations](#ultrasonic-cleaning-considerations)
+   * [Baking](#baking)
+* [CPU removal](#cpu-removal)
+   * [GPU heat shielding](#gpu-heat-shielding)
+   * [CPU lift](#cpu-lift)
+      * [Board support](#board-support)
+      * [Profile](#profile)
+      * [Cooling](#cooling)
+* [Interposer mounting](#interposer-mounting)
+   * [BGA pads cleaning](#bga-pads-cleaning)
+   * [Tenting via's in BGA area](#tenting-vias-in-bga-area)
+      * [Why tent the vias?](#why-tent-the-vias)
+   * [Positioning the aligntool PCB](#positioning-the-aligntool-pcb)
+   * [Interposer preparation](#interposer-preparation)
+   * [Soldering the interposer](#soldering-the-interposer)
+      * [BGA profile](#bga-profile)
+   * [Intermediate checks](#intermediate-checks)
+   * [Populating the interposer](#populating-the-interposer)
+* [Soldering the CPU](#soldering-the-cpu)
+   * [BGA profile](#bga-profile-1)
+   * [Testing](#testing)
+      * [Troubleshooting](#troubleshooting)
+* [Setting CPU VCORE](#setting-cpu-vcore)
+* [CPU/GPU heatsink bracket.](#cpugpu-heatsink-bracket)
+   * [Alternative heatsink mounting solutions](#alternative-heatsink-mounting-solutions)
+      * [Thermal glue/adhesive](#thermal-glueadhesive)
+      * [Screw mounting posts](#screw-mounting-posts)
+   * [Fan recommendation](#fan-recommendation)
+
+<!-- Created by https://github.com/ekalinin/github-markdown-toc -->
+
+
+# Tools and parts
+=================
+The most interesting CPUs to place on an original Xbox are part of the Pentium 3 Tualatin family. They have a different PGA-370 footprint compared to the uPGA-495 which is used on the board by default.
+We therefore install an adapter in between the board and our intended CPU. 
+
+The following parts are needed:
+ - [interposer PCB](https://github.com/zzattack/xbox-cpu-interposer/releases/)
+ - [components to populate interposer PCB](https://htmlpreview.github.io/?https://raw.githubusercontent.com/zzattack/xbox-cpu-interposer/main/kicad/bom/ibom.html)
+ - [aligntool PCB](https://github.com/zzattack/xbox-cpu-interposer/releases/)
+ - [socket P370 CPU](https://www.cpu-world.com/sspec/SL/SL6BY.html)
+ - [3d-printed heatsink mounting bracket](https://github.com/ACE-AU/OG-Xbox-CPU-GPU-Heatsink-brackets-for-Franks-Interposer)
+
 In order to carry out this procedure you require a fairly well-equipped workshop.
 Listed below is the very minimum:
  - BGA station
@@ -22,6 +73,7 @@ Listed below is the very minimum:
  - interposer aligntool pcb
 
 # Motherboard preparations
+==========================
 Our target for today: a fresh 1.6 original Xbox console. Although differences are minor, this guide will also cover upgrades to non-1.6 revision boards.
 ![20250131_175006](https://github.com/user-attachments/assets/790b3587-39fa-436f-87a7-cf8dc972d661)
 
@@ -86,6 +138,7 @@ Conveniently, 3d printers with an enclosure typically have sufficient bed area a
 
 
 # CPU removal
+=============
 With the motherboard fully prepared, we're positioned to begin the CPU replacement process.
 
 ## GPU heat shielding
@@ -152,6 +205,8 @@ This has prevented many of my initial attempts to fail, leading to a point where
 
 ![x2 png 17f4e4579669279c0a5acf65a6f2d83d](https://github.com/user-attachments/assets/cce4e7f1-c5a5-4c50-9102-0c511fa1224a)  
  ![x1 png dea90d838c6f8d1b79eb490e8c339e8e](https://github.com/user-attachments/assets/e073a4b8-19d4-4e28-9ca9-4c42e8b746a8)  
+ ![unnamed](https://github.com/user-attachments/assets/0e3d7c74-4933-4db6-92cd-9612e40a61db)
+
 
 Since these via's are located in between the 1.27mm pitch of the balls, the alignment needs to be good at about <0.15mm for this not to happen.
 
@@ -245,7 +300,7 @@ Pneumatic dispenser with foot pedal and timed bursts allows for placing the 370 
 ![20250131_222217](https://github.com/user-attachments/assets/ef86345c-0bce-4453-8bda-7c8c594e6b50)
 ![20250131_222928](https://github.com/user-attachments/assets/a32eb8df-8720-4f56-bb8f-f60631e7cd2d)
 
-Now place your CPU centered in the blobs. Try to be as accurately as possible when initially setting it down. If adjustments are needed, lift the CPU slightly instead of shoving while the pins still make contact with the interposer. 
+Now place your CPU centered in the blobs. Try to be as accuratele as possible when initially setting it down. If adjustments are needed, lift the CPU slightly instead of shoving while the pins still make contact with the interposer. 
 
 Make sure alignment is good before placing the board onto your BGA machine.
 ![20250131_223116](https://github.com/user-attachments/assets/6067f519-0566-4e90-9769-765a3180b6a9)
@@ -283,11 +338,51 @@ Some general tips:
    - Use a temperature probe taped to the side of the original CPU to get a feel for board temperature.
    - Adjust the profiles if they heat up too much, too fast, or not enough.
 
+Diagram below shows expected voltage readings when console is powered on.
+** For 009 boards (rev 1.0-1.2)
+![009-rear](https://github.com/user-attachments/assets/fff2becf-5b8b-4d12-bd0e-9cb1c1d98113)
+![009-front](https://github.com/user-attachments/assets/3731bec9-1f4d-48f8-b897-8e7d121caf89)
 
-# Setting CPU VCORE
-TODO. Refer to ACE github.
-https://github.com/ACE-AU/OGX-PIII-CPU-VCORE-SETTINGS
+** For 012 boards (rev 1.3-1.4)
+TODO
 
-# CPU/GPU heatsink bracket.
-TODO. Refer to ACE github.
+** For 121 boards (rev 1.6)
+TODO
+
+
+## Setting CPU VCORE
+The original CPU ran at 1.70V while the Tualatin replacement is intended to run at 1.45V. You can usually go a bit lower even, which helps to generate less heat, at the cost of potential stability. 
+This can only be found out by trial and error; some run fine at 1.35V while others won't allow to go below 1.40V at all. This is evidenced by the console hanging unexpectedly during gameplay or even during the flutter bootup animation.
+The [ACE-AU github](https://github.com/ACE-AU/OGX-PIII-CPU-VCORE-SETTINGS) contains detailed information for each of the board revisions.
+
+
+# CPU/GPU heatsink bracket
+==========================
+Due to the form factor difference, we cannot secure the original heatsinks to the CPU and GPU using the original bracket. Instead we use a 3d printed modified version which allows us to clamp the original heatsinks in place.
 https://github.com/ACE-AU/OG-Xbox-CPU-GPU-Heatsink-brackets-for-Franks-Interposer
+Alternatively, eBay seller [computerbooter](https://www.ebay.com/str/computerbooter916) sells these brackets cheaply.  
+
+To mount them, reuse the 5 clips and push pins from the original bracket. The one near pin 1 of the CPU needs to be clipped to fit, which is easily done using side cutters. 
+![20250201_121645](https://github.com/user-attachments/assets/c69376e3-58f2-41ab-a265-b4b6590a4fd7)
+
+The original heatsink is slightly too high to sit under the standard HDD tray. You must trim at least 5.5mm off the top of the fins to make it fit. 
+
+## Alternative heatsink mounting solutions
+If acquiring a 3d-printed bracket is infeasible then several alternative solutions can be used. They are briefly summarized below:
+
+### Thermal glue/adhesive
+This method is very easy to apply: simply apply thermal glue to the CPU, then place the heatsink on top. This forms a permanent bond which probably destroys the install if you attempt to ever remove it. This way you do not require any kind of mounting bracket, clamping solution, or screw holes solution.
+You could then use a smaller heatsink such as this [low-profile one](https://nl.rs-online.com/web/p/heatsinks/1898628) from Fischer Elektronik, which fits underneath the HDD tray. It is is easily cut up into 3 parts and therefore relatively cheap.
+![20220812_155553](https://github.com/user-attachments/assets/429d0e06-0f76-40f9-a83e-9d2e60fe7781)
+
+### Screw mounting posts
+Another option involves cutting the fins on the heatsink to make room for screw holes. You can use the original bracket as a template for positioning the screw holes. This involves a fair bit of work and the combination of screws, optional washers and spacer stud needs to be just right. It does allow for an easily removed heatsink, and thermal properties are quite good if you mount in 3 opposing corners.
+> Note: it's very easy to over-tighten screws using this solution. This might cause strain on the BGA balls and even break the installation if performed incorrectly!
+
+![20250201_124850](https://github.com/user-attachments/assets/2773541a-e9cf-4c2c-a09b-7790ebeb5e79)
+![20220831_003132](https://github.com/user-attachments/assets/aee1e84e-554b-4700-888c-873e82a6d943)
+
+## Fan recommendation
+The upgraded CPUs use a lot more power than the original one, up to 30-35W, whereas the original one was closer to 25W. Poor heatsink solutions will cause the CPU to run quite hot. It's important that the temperature remains (well) below their maximum safe operating temperature of 85°C.  
+Many have opted to replace the somewhat noisy stock fan with a lower RPM one such as 50mm Noctua's, but this is ill advised. The silent operation is mostly achieved through lower fan speed and thereby lower airflow, but these CPUs require adequate cooling. My recommendation is to use good thermal paste, properly applied, along with the stock fan operating at >70% fan speed. This should keep temperatures under 60°C even during prolonged use.
+
