@@ -13,8 +13,7 @@ I can be contacted at frank@zzattack.org if you're looking to obtain PCBs or CPU
 This board is a recreation of the original FRIENDTECH design. Revision 1 was a board-level clone of original design through intermediate clones by 'trusty', 'N64freak' and 'Kekule'. Revisions 2 and 3 are re-routed from scratch, inspired by pictures of a similar board with cleaner layout by @gaasedelen, who also kindly assisted in finding issues with early board revisions.
 
 # Usage (TODO)
-Inspect [BOM](https://htmlpreview.github.io/?https://raw.githubusercontent.com/zzattack/xbox-cpu-interposer/main/kicad/bom/ibom.html) for an overview of required capacitors/resistors.
-Installation guide will be added later.
+See [guide](https://github.com/zzattack/xbox-cpu-interposer/blob/main/guide.md).
 
 # Status
 Full schematic and PCB are routed. Gerber files are available in the Github releases overview.
