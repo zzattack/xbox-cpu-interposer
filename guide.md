@@ -3,7 +3,7 @@
 # XBOX CPU upgrade guide
 Applying CPU upgrades to the original Xbox has been done since 2004. Yet, up until recently, resources and information to carry out this procedure have been hard to come by.
 This guide aims to gather relevant information, tips and tricks all in one place to serve as a reference guide for performing this procedure properly, successfully, and repeatably.
-deally, even newcomers should succeed on their first try.
+Ideally, even newcomers should succeed on their first try.
 
 # Tools
 In order to carry out this procedure you require a fairly well-equipped workshop.
@@ -29,7 +29,7 @@ This guide will list all the steps taken to upgrade this console with a 1.4 GHz 
 In general, any socket 370 CPU with 133MHz FSB will function correctly for this mod. The prefered CPUs to use are SL5XL and SL6BY since those are the only ones operating at 1.4 GHz. Some additional compatibility information can be found [here](https://github.com/N64-Freak/Xbox-CPU-interposer/tree/main/Hardware#choosing-a-processor).
 
 ## Removal from case
-We start by removing the Xbox motherboard from its case. There's 6x torx-20 screws to remove from the bottom, followed by several torx-10 to get the board out. Several very [detailed writeout](https://www.se7ensins.com/forums/threads/dissassembling-your-xbox-an-in-depth-tutorial.6714/) can be found with elsewhere with ease.
+We start by removing the Xbox motherboard from its case. There's 6x torx-20 screws to remove from the bottom, followed by several torx-10 to get the board out. Several very [detailed writeups](https://www.se7ensins.com/forums/threads/dissassembling-your-xbox-an-in-depth-tutorial.6714/) can be found elsewhere with ease.
 
 ## Heatsink removal
 First we remove the clamps holding the heatsinks in place. Using a screwdriver the clamps can be unlatched with minor force. I prefer to remove the GPU heatsink from the center of the board, and remove the CPU one from the edge:
@@ -148,17 +148,18 @@ After curing, the result should look as follows.
 ### Why tent the vias?
 The solder mask on these 25 year old boards is not of incredible quality, so solder easily attaches to the via's if they are not tented as suggested.
 Should the interposer move during reflow, it is very likely to cause a solder bridge to develop between a chip BGA pad and PCB via.
-This has prevented many of my initial attempts to fail, leading to a point where I went to obtain x-ray images of the BGA area. These reveal the bridges formed between via and BGA pad, leading to a failed install.
-![x2 png 17f4e4579669279c0a5acf65a6f2d83d](https://github.com/user-attachments/assets/cce4e7f1-c5a5-4c50-9102-0c511fa1224a)
-![x1 png dea90d838c6f8d1b79eb490e8c339e8e](https://github.com/user-attachments/assets/e073a4b8-19d4-4e28-9ca9-4c42e8b746a8)
+This has prevented many of my initial attempts to fail, leading to a point where I went to obtain x-ray images of the BGA area. These reveal the bridges formed between via and BGA pad, leading to a failed install.  
+
+![x2 png 17f4e4579669279c0a5acf65a6f2d83d](https://github.com/user-attachments/assets/cce4e7f1-c5a5-4c50-9102-0c511fa1224a)  
+ ![x1 png dea90d838c6f8d1b79eb490e8c339e8e](https://github.com/user-attachments/assets/e073a4b8-19d4-4e28-9ca9-4c42e8b746a8)  
 
 Since these via's are located in between the 1.27mm pitch of the balls, the alignment needs to be good at about <0.15mm for this not to happen.
 
-Note that at first I did not come up with the techniques where a sacrificial interposer aligntool PCB is used and the interposer is secured firmly in place. As such, aligning the interposer accurately was *very* difficult.
+Note that at first I did not come up with the techniques where an interposer aligntool PCB is used and the interposer is secured firmly in place. As such, aligning the interposer accurately was *very* difficult.
 With the improved technique, we can place the interposer dead accurately and thereby reduce likeliness of this phenomenom occurring. As such, it may be fine to omit this step. That said, for the first few upgrades one performs, definitely do not skip it.
 
 ## Positioning the aligntool PCB
-In order to solder the interposer, we must accurately place it on the BGA pads. The technique describe here makes use of a aligntool PCB.
+In order to solder the interposer, we must accurately place it on the BGA pads. The technique described here makes use of an aligntool PCB.
 This PCB is manufactured with the exact same dimensions as the actual interposer, and has 0.9mm drill holes going right through where the BGA pads are found on the actual interposer. 
 This allows as it were to *see through* the interposer, enabling accurate positioning on top of the BGA pads on the Xbox motherboard. 
 
@@ -189,7 +190,8 @@ Apply a small layer of flux on the BGA pads and use a brush or your finger (wear
 ![20250131_214831](https://github.com/user-attachments/assets/de0e4886-6f03-4abe-9c72-56dbc6509fe7)
 ![20250131_214911](https://github.com/user-attachments/assets/970ffb86-235d-4e0b-9222-2814b1a137ce)
 
-Then place the interposer
+Then place the interposer and head over to the BGA station.
+![20250131_221401](https://github.com/user-attachments/assets/c90a45d2-483b-4772-ba08-c42565e4568e)
 
 ### BGA profile
 Shown below is the BGA machine profile I use for the interposer. Again, this may not apply directly to your situation. Adapt as necessary.
@@ -202,6 +204,7 @@ After the profile finishes, allow the board to cool down for about 10 minutes be
 
 ## Intermediate checks
 At this point clearly the Xbox cannot boot, but there are a few things we should verify to ensure we're good to carry on.
+Briefly remove the GPU heat shielding tape from both sides of the board before performing these measurements.
 
 On the interposer, measure the following using a digital multimeter:
  - VCORE --> reading should start at ~50 ohms, then continues to rise indefinitely
@@ -212,8 +215,8 @@ On the interposer, measure the following using a digital multimeter:
 If any of these read differently, the interposer is incorrectly aligned or a bridge has formed underneath it. It is then **pointless to continue**.  
 Remove the interposer and start fresh. In this case I always recommend return to stock state, with the original CPU.
 
-The next check is for the voltage rail powering the MCPX and XGPU:
-  VGPU: ~20 ohms, slowly rising -- measures 1.75V when powered on. 
+The next check is for the voltage rail powering the MCPX and XGPU:  
+ - VGPU: ~20 ohms, slowly rising -- measures 1.75V when powered on.
 Must be AT LEAST 2.5 ohms. If it reads <1 ohm the board has warped and a bridge has formed under the XGPU, or the XGPU has died from the heat. In most cases the board cannot be resurrected without transplanting or reballing the XGPU.
 
 TODO: picture of where to measure this on the board revisions.
@@ -224,6 +227,8 @@ Finally, if these checks pass, turn on the Xbox. just the AV cord, PSU and front
 We expect the Xbox to FRAG. Other outcomes: 
  - If the Xbox does not turn on: probably a short that needs to be resolved. Remove interposer and start over.
  - If front LED blinks orange and fans turn on at 100%: likely a bridge on some of the address lines. Remove interposer and start over.
+
+Put the aluminum tape back before continuing with the next steps.
 
 ## Populating the interposer
 Unless you obtained a prepopulated interposer, solder the components from the [BOM](https://htmlpreview.github.io/?https://raw.githubusercontent.com/zzattack/xbox-cpu-interposer/main/kicad/bom/ibom.html) onto the interposer now.
@@ -257,7 +262,7 @@ I like to use a 60x60mm nozzle which is able to get all the pins to melting temp
 Again, wait about 10 minutes after the profile completes before handling the board so as to not unnecessarily stress it or induce potential warping.
 
 ## Testing
-At this point, the Xbox should boot! Inspect the pins to ensure all paste has melted and no bridges have formed.
+At this point, the Xbox should boot! Inspect the pins to ensure all paste has melted and no bridges have formed. Remove the GPU heat shielding tape once more.
 ![20250131_224609](https://github.com/user-attachments/assets/0a7134a7-b863-410a-9c84-923ac091cde4)
 
 If so, power it on and keep your fingers crossed.  If you get a boot logo, turn off the Xbox. The CPU is still operating at 1.70V but it's intended for only 1.45V, so we'll address that next.
