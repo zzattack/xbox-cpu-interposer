@@ -221,13 +221,17 @@ Solder 4 resistors of size 0603 on the underside of the aligntool. This way it i
 Next align it so that the holes cover the centers of the BGA pads, and then tape it in place.
 ![20250131_214156](https://github.com/user-attachments/assets/0f8fca0d-4f79-408e-b9fd-2a7f2ff566b8)
 
+You may have to move capacitor C1D4 down slightly for the aligntool to position properly. With rev 3.3 interposers this is not strictly necessary, but board variations might dictate otherwise.
+![20250118_124558](https://github.com/user-attachments/assets/9ceacecd-108c-4ea0-94ca-8e25f4c1f163)
+
 We'll now solder some (bulky) SMD capacitors along the edges of the aligntool PCB. Either attach them to surrounding passives, or scrape away some solder mask to reveal some copper to which the capacitors can attach with solder.
 ![20250131_214339](https://github.com/user-attachments/assets/3fea352e-0d6d-4eaa-b479-9ba40a17c442)
  
 Suggested locations for the 1.6 revision are shown below.
 ![20250131_214700](https://github.com/user-attachments/assets/3b03c1c1-0c38-4238-841d-53e929ea98e4)
 
-TODO: add picture with suggested capacitor locations for non-1.6 boards.
+For other revisions, capacitor locations as used in the following picture work well.
+![20250116_221149](https://github.com/user-attachments/assets/53c7f148-8f53-4811-be24-acace9214043)
 
 > Note: It's best not to completely box in the aligntool, but allow for some very minor play. Manufacturing tolerances may result in slightly different outlines between aligntool and interposer. During soldering, the interposer will settle in place correctly.
 
@@ -267,12 +271,10 @@ On the interposer, measure the following using a digital multimeter:
 If any of these read differently, the interposer is incorrectly aligned or a bridge has formed underneath it. It is then **pointless to continue**.  
 Remove the interposer and start fresh. In this case I always recommend return to stock state, with the original CPU.
 
-The next check is for the voltage rail powering the MCPX and XGPU:  
+For non rev-1.6 boards, the next check is for the voltage rail powering the MCPX and XGPU:
  - VGPU: ~20 ohms, slowly rising -- measures 1.75V when powered on.
 Must be AT LEAST 2.5 ohms. If it reads <1 ohm the board has warped and a bridge has formed under the XGPU, or the XGPU has died from the heat. In most cases the board cannot be resurrected without transplanting or reballing the XGPU.
-
-TODO: picture of where to measure this on the board revisions.
-
+![20250201_143008](https://github.com/user-attachments/assets/baea2f9e-1818-43a2-8823-94d44f287d67)  
 
 Finally, if these checks pass, turn on the Xbox. just the AV cord, PSU and front panel need to be connected.  
 
@@ -344,7 +346,8 @@ Diagram below shows expected voltage readings when console is powered on.
 TODO
 
 ** For 121 boards (rev 1.6)
-TODO
+![Inner](https://github.com/user-attachments/assets/e54d0cc5-7996-4ec6-9aff-5704fac8a998)
+(picture courtesy of @RedHerring32
 
 
 ## Setting CPU VCORE
@@ -370,6 +373,8 @@ If acquiring a 3d-printed bracket is infeasible then several alternative solutio
 This method is very easy to apply: simply apply thermal glue to the CPU, then place the heatsink on top. This forms a permanent bond which probably destroys the install if you attempt to ever remove it. This way you do not require any kind of mounting bracket, clamping solution, or screw holes solution.
 You could then use a smaller heatsink such as this [low-profile one](https://nl.rs-online.com/web/p/heatsinks/1898628) from Fischer Elektronik, which fits underneath the HDD tray. It is is easily cut up into 3 parts and therefore relatively cheap.
 ![20220812_155553](https://github.com/user-attachments/assets/429d0e06-0f76-40f9-a83e-9d2e60fe7781)
+
+Although thermal glue has way worse conductive properties than thermal paste, decent results can be obtained. [EC360](https://www.coolsierra.com/collections/thermal-adhesive/products/ec360-glue) in particular has given me passable results in the past.
 
 ### Screw mounting posts
 Another option involves cutting the fins on the heatsink to make room for screw holes. You can use the original bracket as a template for positioning the screw holes. This involves a fair bit of work and the combination of screws, optional washers and spacer stud needs to be just right. It does allow for an easily removed heatsink, and thermal properties are quite good if you mount in 3 opposing corners.
