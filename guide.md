@@ -46,7 +46,6 @@ Table of Contents
 
 
 # Tools and parts
-=================
 The most interesting CPUs to place on an original Xbox are part of the Pentium 3 Tualatin family. They have a different PGA-370 footprint compared to the uPGA-495 which is used on the board by default.
 We therefore install an adapter in between the board and our intended CPU. 
 
@@ -73,7 +72,6 @@ Listed below is the very minimum:
  - interposer aligntool pcb
 
 # Motherboard preparations
-==========================
 Our target for today: a fresh 1.6 original Xbox console. Although differences are minor, this guide will also cover upgrades to non-1.6 revision boards.
 ![20250131_175006](https://github.com/user-attachments/assets/790b3587-39fa-436f-87a7-cf8dc972d661)
 
@@ -138,7 +136,6 @@ Conveniently, 3d printers with an enclosure typically have sufficient bed area a
 
 
 # CPU removal
-=============
 With the motherboard fully prepared, we're positioned to begin the CPU replacement process.
 
 ## GPU heat shielding
@@ -357,7 +354,6 @@ The [ACE-AU github](https://github.com/ACE-AU/OGX-PIII-CPU-VCORE-SETTINGS) conta
 
 
 # CPU/GPU heatsink bracket
-==========================
 Due to the form factor difference, we cannot secure the original heatsinks to the CPU and GPU using the original bracket. Instead we use a 3d printed modified version which allows us to clamp the original heatsinks in place.
 https://github.com/ACE-AU/OG-Xbox-CPU-GPU-Heatsink-brackets-for-Franks-Interposer
 Alternatively, eBay seller [computerbooter](https://www.ebay.com/str/computerbooter916) sells these brackets cheaply.  
