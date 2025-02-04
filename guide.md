@@ -364,7 +364,12 @@ Alternatively, eBay seller [computerbooter](https://www.ebay.com/str/computerboo
 To mount them, reuse the 5 clips and push pins from the original bracket. The one near pin 1 of the CPU needs to be clipped to fit, which is easily done using side cutters. 
 ![20250201_121645](https://github.com/user-attachments/assets/c69376e3-58f2-41ab-a265-b4b6590a4fd7)
 
-The original heatsink is slightly too high to sit under the standard HDD tray. You must trim at least 5.5mm off the top of the fins to make it fit. 
+The original heatsink is slightly too high to sit under the standard HDD tray. You must trim at least 5.5mm off the top of the fins to make it fit.  
+
+## Capacitor relocation on rev 1.6 motherboard
+On revision 1.6 motherboards, one electrolyic capacitor which sits between the fan and heatsink bracket needs to be moved slightly. After desoldering it, I mount the bracket and lay the capacitor flat on its side before attaching the snipped-off legs from an LED or another capacitor to its anode/kathode. Do keep attention to its marking since these are polarized!
+![20250203_213918](https://github.com/user-attachments/assets/ccc2ad2f-7c3f-4a0e-8c78-fc0353e236b5)
+
 
 ## Alternative heatsink mounting solutions
 If acquiring a 3d-printed bracket is infeasible then several alternative solutions can be used. They are briefly summarized below:
