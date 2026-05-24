@@ -1,53 +1,55 @@
 # XBOX CPU upgrade guide
 Applying CPU upgrades to the original Xbox has been done since 2004. Yet, up until recently, resources and information to carry out this procedure have been hard to come by.
-This guide aims to gather relevant information, tips and tricks all in one place to serve as a reference guide for performing this procedure properly, successfully, and repeatably.
+This guide aims to gather relevant information, tips and tricks in one place to serve as a reference guide for performing this procedure properly, successfully, and repeatably.
 Ideally, even newcomers should succeed on their first try.
 
 
 Table of Contents
 =================
-* [XBOX CPU upgrade guide](#xbox-cpu-upgrade-guide)
-* [Tools and parts](#tools-and-parts)
-* [Motherboard preparations](#motherboard-preparations)
-   * [Removal from case](#removal-from-case)
-   * [Heatsink removal](#heatsink-removal)
-      * [Heatsink bracket removal](#heatsink-bracket-removal)
-   * [Thermal paste cleaning](#thermal-paste-cleaning)
-   * [Ultrasonic cleaning considerations](#ultrasonic-cleaning-considerations)
-   * [Baking](#baking)
-* [CPU removal](#cpu-removal)
-   * [GPU heat shielding](#gpu-heat-shielding)
-   * [CPU lift](#cpu-lift)
-      * [Board support](#board-support)
-      * [Profile](#profile)
-      * [Cooling](#cooling)
-* [Interposer mounting](#interposer-mounting)
-   * [BGA pads cleaning](#bga-pads-cleaning)
-   * [Tenting via's in BGA area](#tenting-vias-in-bga-area)
-      * [Why tent the vias?](#why-tent-the-vias)
-   * [Positioning the aligntool PCB](#positioning-the-aligntool-pcb)
-   * [Interposer preparation](#interposer-preparation)
-   * [Soldering the interposer](#soldering-the-interposer)
-      * [BGA profile](#bga-profile)
-   * [Intermediate checks](#intermediate-checks)
-   * [Populating the interposer](#populating-the-interposer)
-* [Soldering the CPU](#soldering-the-cpu)
-   * [BGA profile](#bga-profile-1)
-   * [Testing](#testing)
-      * [Troubleshooting](#troubleshooting)
-* [Setting CPU VCORE](#setting-cpu-vcore)
-* [CPU/GPU heatsink bracket.](#cpugpu-heatsink-bracket)
-   * [Alternative heatsink mounting solutions](#alternative-heatsink-mounting-solutions)
-      * [Thermal glue/adhesive](#thermal-glueadhesive)
-      * [Screw mounting posts](#screw-mounting-posts)
-   * [Fan recommendation](#fan-recommendation)
+- [XBOX CPU upgrade guide](#xbox-cpu-upgrade-guide)
+- [Table of Contents](#table-of-contents)
+- [Tools and parts](#tools-and-parts)
+- [Motherboard preparations](#motherboard-preparations)
+  - [Removal from case](#removal-from-case)
+  - [Heatsink removal](#heatsink-removal)
+    - [Heatsink bracket removal](#heatsink-bracket-removal)
+  - [Thermal paste cleaning](#thermal-paste-cleaning)
+  - [Ultrasonic cleaning considerations](#ultrasonic-cleaning-considerations)
+  - [Baking](#baking)
+- [CPU removal](#cpu-removal)
+  - [GPU heat shielding](#gpu-heat-shielding)
+  - [CPU lift](#cpu-lift)
+    - [Board support](#board-support)
+    - [Profile](#profile)
+    - [Cooling](#cooling)
+- [Interposer mounting](#interposer-mounting)
+  - [BGA pads cleaning](#bga-pads-cleaning)
+  - [Tenting vias in BGA area](#tenting-vias-in-bga-area)
+    - [Why tent the vias?](#why-tent-the-vias)
+  - [Positioning the aligntool PCB](#positioning-the-aligntool-pcb)
+  - [Interposer preparation](#interposer-preparation)
+  - [Soldering the interposer](#soldering-the-interposer)
+    - [BGA profile](#bga-profile)
+  - [Intermediate checks](#intermediate-checks)
+  - [Populating the interposer](#populating-the-interposer)
+- [Soldering the CPU](#soldering-the-cpu)
+  - [BGA profile](#bga-profile-1)
+  - [Testing](#testing)
+    - [Troubleshooting](#troubleshooting)
+  - [Setting CPU VCORE](#setting-cpu-vcore)
+- [CPU/GPU heatsink bracket](#cpugpu-heatsink-bracket)
+  - [Capacitor relocation on rev 1.6 motherboard](#capacitor-relocation-on-rev-16-motherboard)
+  - [Alternative heatsink mounting solutions](#alternative-heatsink-mounting-solutions)
+    - [Thermal glue/adhesive](#thermal-glueadhesive)
+    - [Screw mounting posts](#screw-mounting-posts)
+  - [Fan recommendation](#fan-recommendation)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
 
 
 # Tools and parts
-The most interesting CPUs to place on an original Xbox are part of the Pentium 3 Tualatin family. They have a different PGA-370 footprint compared to the uPGA-495 which is used on the board by default.
-We therefore install an adapter in between the board and our intended CPU. 
+The most interesting CPUs to place on an original XBOX are part of the Pentium 3 Tualatin family. They have a different PGA-370 footprint compared to the uPGA-495 which is used on the board by default.
+We therefore install an adapter in between the board and our intended CPU.
 
 The following parts are needed:
  - [interposer PCB](https://github.com/zzattack/xbox-cpu-interposer/releases/)
@@ -67,19 +69,16 @@ Listed below is the very minimum:
  - UV curable solder mask
  - 0.76mm solder balls
  - assortment of resistors
- - interposer board
- - [components for interposer board](https://htmlpreview.github.io/?https://raw.githubusercontent.com/zzattack/xbox-cpu-interposer/main/kicad/bom/ibom.html)
- - interposer aligntool pcb
 
 # Motherboard preparations
-Our target for today: a fresh 1.6 original Xbox console. Although differences are minor, this guide will also cover upgrades to non-1.6 revision boards.
+Our target for today: a fresh 1.6 original XBOX console. Although differences are minor, this guide will also cover upgrades to non-1.6 revision boards.
 ![20250131_175006](https://github.com/user-attachments/assets/790b3587-39fa-436f-87a7-cf8dc972d661)
 
 This guide will list all the steps taken to upgrade this console with a 1.4 GHz SL6BY CPU.
-In general, any socket 370 CPU with 133MHz FSB will function correctly for this mod. The prefered CPUs to use are SL5XL and SL6BY since those are the only ones operating at 1.4 GHz. Some additional compatibility information can be found [here](https://github.com/N64-Freak/Xbox-CPU-interposer/tree/main/Hardware#choosing-a-processor).
+In general, any socket 370 CPU with 133MHz FSB will function correctly for this mod. The prefererd CPUs to use are SL5XL and SL6BY since those are the only ones operating at 1.4 GHz. Some additional compatibility information can be found [here](https://github.com/N64-Freak/Xbox-CPU-interposer/tree/main/Hardware#choosing-a-processor).
 
 ## Removal from case
-We start by removing the Xbox motherboard from its case. There's 6x torx-20 screws to remove from the bottom, followed by several torx-10 to get the board out. Several very [detailed writeups](https://www.se7ensins.com/forums/threads/dissassembling-your-xbox-an-in-depth-tutorial.6714/) can be found elsewhere with ease.
+We start by removing the XBOX motherboard from its case. There's 6x torx-20 screws to remove from the bottom, followed by several torx-10 to get the board out. Several very [detailed writeups](https://www.se7ensins.com/forums/threads/dissassembling-your-xbox-an-in-depth-tutorial.6714/) can be found elsewhere with ease.
 
 ## Heatsink removal
 First we remove the clamps holding the heatsinks in place. Using a screwdriver the clamps can be unlatched with minor force. I prefer to remove the GPU heatsink from the center of the board, and remove the CPU one from the edge:
@@ -87,7 +86,7 @@ First we remove the clamps holding the heatsinks in place. Using a screwdriver t
 ![20250131_191318](https://github.com/user-attachments/assets/bd2268ba-78e0-44f8-b89b-687a3139bafe)
 ![20250131_191233](https://github.com/user-attachments/assets/d634a4ba-fc9a-41f7-8a26-a65962133fc7)
 
- The heatsinks can now be removed. If they feel stuck, do not apply force, since this is likely to strain the BGA balls underneath the chips. Use a hot-air gun for 20-30 seconds at high air speed, or just power on the xbox for a minute or two, and the heatsink should slide off with ease.
+ The heatsinks can now be removed. If they feel stuck, do not apply force, since this is likely to strain the BGA balls underneath the chips. Use a hot-air gun for 20-30 seconds at high air speed, or just power on the XBOX for a minute or two, and the heatsink should slide off with ease.
  ![20250131_191502](https://github.com/user-attachments/assets/4e6e9c67-cdbd-4f1f-ab14-3a348ce9d7fa)
 
  ### Heatsink bracket removal
@@ -120,15 +119,15 @@ Cleaned result, good as new.
 ![20250131_192317](https://github.com/user-attachments/assets/438de04a-21ee-43a3-851b-128028f9e838)
 
 ## Ultrasonic cleaning considerations
-Boards were produced since 2000 and thus may have 25 years of gunk collected on them. Depending on the state of board, one may opt to (ultrasonically) clean it before working on it from a hygiene point of view. 
+Boards were produced since 2000 and thus may have 25 years of gunk collected on them. Depending on the state of the board, one may opt to (ultrasonically) clean it before working on it from a hygiene point of view.
 If the board collected primarily dust I will use compressed air to get rid of the worst.
 I like to run the board through ultrasonic cleaning only once, so as a rule of thumb: if the board is nasty, clean it before working on it. Otherwise, run it through the ultrasonic after we're done.
 Benefit of cleaning afterwards is that all flux residue left behind during our work gets cleaned up perfectly along.
 
 ## Baking
-Right as you're getting excited to work on your upgrade, I urge you to exert patience. I'm unaware of the history of most boards coming in, and thus prefer to mitigate risk as much as possible. 
-Boards stored in humid locations may have collected moisture. We'll be heating up the board significantly when replacing its CPU, which may lead to (violent) reactions within the board and/or chips mounted on it. 
-Particularly the GPU is known to fail if no precautions are taken. Board warp is an additional concern.  
+Right as you're getting excited to work on your upgrade, I urge you to exert patience. I'm unaware of the history of most boards coming in, and thus prefer to mitigate risk as much as possible.
+Boards stored in humid locations may have collected moisture. We'll be heating up the board significantly when replacing its CPU, which may lead to (violent) reactions within the board and/or chips mounted on it.
+Particularly the GPU is known to fail if no precautions are taken. Board warp is an additional concern.
 My recommendation is (at least) 12h of baking in an oven at about 90°C.
 
 Conveniently, 3d printers with an enclosure typically have sufficient bed area and offer a filament drying option which suits this purpose adequately.
@@ -139,7 +138,7 @@ Conveniently, 3d printers with an enclosure typically have sufficient bed area a
 With the motherboard fully prepared, we're positioned to begin the CPU replacement process.
 
 ## GPU heat shielding
-The GPU is particularly susceptible to failure if improperly treated. I use aluminum tape to shield it from some of the heat generated during the BGA station cycles. Alternatively, kapton tape or isolating (silicone) thermal pads can be used as well.
+The GPU is particularly susceptible to failure if improperly treated. I use aluminum tape to shield it from some of the heat generated during the BGA station cycles. Alternatively, kapton tape or insulating (silicone) thermal pads can be used as well.
 ![20250131_192655](https://github.com/user-attachments/assets/3717d6e9-4b6f-4f55-a760-069a550dfae3)
 
 ![20250131_192649](https://github.com/user-attachments/assets/4925860c-f3ca-47ff-ae3c-79cda5b24cbf)
@@ -148,18 +147,18 @@ The GPU is particularly susceptible to failure if improperly treated. I use alum
 We'll now remove the CPU on the BGA station. The profile I'm using is shown below. It can serve as a starting point, but is by no means a reference.
 ![20250131_193350](https://github.com/user-attachments/assets/e6278477-0ae2-4d13-85b9-9529d3a643a0)
 
-Each BGA machine differs, and even the climate of where it is located is of important influence, and as such, your profile is specific to your own setup.
+Each BGA machine differs, and even the climate of the room it is sits in matters significantly, and as such, your profile is specific to your own setup.
 A very good BGA machine may be able to accurately control its output to match the temperatures requested in the profile, but for simply removing the CPU, this is not utterly important.
 ![20250131_193423](https://github.com/user-attachments/assets/68ff106c-96fa-44e9-b347-8253d37b3904)
 
 ### Board support
-To prevent warpage of the motherboard, ensure the board is properly supported along its edges and ideally also in the center. This will prevent board sag. Do not take this lightly!  
+To prevent warpage of the motherboard, ensure the board is properly supported along its edges and ideally also in the center. This will prevent board sag. Do not take this lightly!
 
 The machine illustrated below has 6 support pivots, and the bottom heater is positioned against the board, thereby supporting it nicely in the center.
 ![20250131_193336](https://github.com/user-attachments/assets/c6f39dfe-767b-408e-a000-eb1ae5fd21ea)
 
 ### Profile
-What I prefer to do is heat the board using the IR plates, some heat from the bottom, and after a while as the board has heated up, the top heater puts the temperature over the leaded solder melting edge.
+What I prefer to do is heat the board using the IR plates, some heat from the bottom, and after a while as the board has heated up, the top heater raises the temperature above the leaded solder melting point.
 By probing the edge of the CPU chip with tweezers you can find out when the balls have melted. At this point, stop your profile and quickly lift the chip. No need to strain the board further by letting the profile go on longer than necessary.
 ![20250131_193730 mp4_snapshot_00 03 430](https://github.com/user-attachments/assets/3a6e78dd-d393-4cdb-85ad-a7047ddff55f)
 
@@ -169,7 +168,7 @@ By probing the edge of the CPU chip with tweezers you can find out when the ball
 Let the board cool for ~10 minutes. While the board is warm, it is most prone to warping. Be patient!
 
 # Interposer mounting
-With the CPU removed, it's time to continue with the next step in which we solder the interposer onto the Xbox motherboard!
+With the CPU removed, it's time to continue with the next step in which we solder the interposer onto the XBOX motherboard!
 
 ## BGA pads cleaning
 First up: cleaning the BGA pads. Apply ample flux, then use a chisel or bevel tip on your iron to go over the BGA area. A lot of solder will stick to your iron. Give the iron a nudge above a waste bin to get rid of most of the excess solder.
@@ -178,17 +177,17 @@ First up: cleaning the BGA pads. Apply ample flux, then use a chisel or bevel ti
 About 80% of the solder can be removed this way in mere seconds, which will save a lot on desoldering braid.
 ![20250131_211159](https://github.com/user-attachments/assets/08c5f116-613c-4078-8bdb-d38d770f024b)
 
-Wipe up the remaining solder using desoldering braid. Do **not** exert force on the iron. If your wick won't move, either wait a while (5-10s) for the wick to really heat up, or use a higher temperature on the iron. 
+Wipe up the remaining solder using desoldering braid. Do **not** exert force on the iron. If your wick won't move, either wait a while (5-10s) for the wick to really heat up, or use a higher temperature on the iron.
 Better yet: increase contact surface between iron and the wick. This is why spade-like tips like the one shown below are so effective for this purpose: they are able to really pump heat into the wick, and thereby the pads underneath, allowing for solder to be removed from many pads at once.
 ![20250131_211129](https://github.com/user-attachments/assets/6f23cb17-0417-42df-82ac-a5c1216b38a9)
 
 Clean up with IPA and kimwipes. Inspect that all pads are nicely flattened.
 ![20250131_211030](https://github.com/user-attachments/assets/4dfb2d35-a291-406d-a5c0-edea5a5d255d)
 
-## Tenting via's in BGA area
-The next step is a little tedious and by some considered superfluous. Personally I believe the increased chance of success merits the 10 minutes spent on it.  
+## Tenting vias in BGA area
+The next step is a little tedious and by some considered superfluous. Personally I believe the increased chance of success merits the 10 minutes spent on it.
 
-Using tweezers we apply UV curable solder mask on each of the via's which sit in between the BGA pads in the CPU area.
+Using tweezers we apply UV curable solder mask on each of the vias which sit in between the BGA pads in the CPU area.
 ![20250131_211538](https://github.com/user-attachments/assets/fe7b8cf1-a161-42e4-bc39-a6cbcb6c035f)
 
 After curing, the result should look as follows.
@@ -196,26 +195,26 @@ After curing, the result should look as follows.
 ![20250131_213042](https://github.com/user-attachments/assets/eae9d59b-38c9-4462-91e3-d5c35b3edfc6)
 
 ### Why tent the vias?
-The solder mask on these 25 year old boards is not of incredible quality, so solder easily attaches to the via's if they are not tented as suggested.
+The solder mask on these 25 year old boards is not of incredible quality, so solder easily attaches to the vias if they are not tented as suggested.
 Should the interposer move during reflow, it is very likely to cause a solder bridge to develop between a chip BGA pad and PCB via.
-This has prevented many of my initial attempts to fail, leading to a point where I went to obtain x-ray images of the BGA area. These reveal the bridges formed between via and BGA pad, leading to a failed install.  
+This has caused many of my initial attempts to fail, leading to a point where I went to obtain x-ray images of the BGA area. These reveal the bridges formed between via and BGA pad, leading to a failed install.
 
-![x2 png 17f4e4579669279c0a5acf65a6f2d83d](https://github.com/user-attachments/assets/cce4e7f1-c5a5-4c50-9102-0c511fa1224a)  
- ![x1 png dea90d838c6f8d1b79eb490e8c339e8e](https://github.com/user-attachments/assets/e073a4b8-19d4-4e28-9ca9-4c42e8b746a8)  
+![x2 png 17f4e4579669279c0a5acf65a6f2d83d](https://github.com/user-attachments/assets/cce4e7f1-c5a5-4c50-9102-0c511fa1224a)
+ ![x1 png dea90d838c6f8d1b79eb490e8c339e8e](https://github.com/user-attachments/assets/e073a4b8-19d4-4e28-9ca9-4c42e8b746a8)
  ![unnamed](https://github.com/user-attachments/assets/0e3d7c74-4933-4db6-92cd-9612e40a61db)
 
 
-Since these via's are located in between the 1.27mm pitch of the balls, the alignment needs to be good at about <0.15mm for this not to happen.
+Since these vias are located in between the 1.27mm pitch of the balls, the alignment needs to be good at about <0.15mm for this not to happen.
 
 Note that at first I did not come up with the techniques where an interposer aligntool PCB is used and the interposer is secured firmly in place. As such, aligning the interposer accurately was *very* difficult.
-With the improved technique, we can place the interposer dead accurately and thereby reduce likeliness of this phenomenom occurring. As such, it may be fine to omit this step. That said, for the first few upgrades one performs, definitely do not skip it.
+With the improved technique, we can place the interposer extremely accurately and thereby reduce likelihood of this occurring. As such, it may be fine to omit this step. That said, for the first few upgrades one performs, definitely do not skip it.
 
 ## Positioning the aligntool PCB
 In order to solder the interposer, we must accurately place it on the BGA pads. The technique described here makes use of an aligntool PCB.
-This PCB is manufactured with the exact same dimensions as the actual interposer, and has 0.9mm drill holes going right through where the BGA pads are found on the actual interposer. 
-This allows as it were to *see through* the interposer, enabling accurate positioning on top of the BGA pads on the Xbox motherboard. 
+This PCB is manufactured with the exact same dimensions as the actual interposer, and has 0.9mm drill holes going right through where the BGA pads are found on the actual interposer.
+This allows as it were to *see through* the interposer, enabling accurate positioning on top of the BGA pads on the XBOX motherboard.
 
-Solder 4 resistors of size 0603 on the underside of the aligntool. This way it is elevated to the same height at the components on the Xbox motherboard, thereby eliminating tilt.
+Solder 4 resistors of size 0603 on the underside of the aligntool. This way it is elevated to the same height as the components on the XBOX motherboard, thereby eliminating tilt.
 ![20250131_214745](https://github.com/user-attachments/assets/da9c4172-9c09-4f3f-b13a-b763930f51ad)
 
 Next align it so that the holes cover the centers of the BGA pads, and then tape it in place.
@@ -226,7 +225,7 @@ You may have to move capacitor C1D4 down slightly for the aligntool to position 
 
 We'll now solder some (bulky) SMD capacitors along the edges of the aligntool PCB. Either attach them to surrounding passives, or scrape away some solder mask to reveal some copper to which the capacitors can attach with solder.
 ![20250131_214339](https://github.com/user-attachments/assets/3fea352e-0d6d-4eaa-b479-9ba40a17c442)
- 
+
 Suggested locations for the 1.6 revision are shown below.
 ![20250131_214700](https://github.com/user-attachments/assets/3b03c1c1-0c38-4238-841d-53e929ea98e4)
 
@@ -237,12 +236,11 @@ For other revisions, capacitor locations as used in the following picture work w
 
 ## Interposer preparation
 Specifically of note: tack balls using thin layer of flux + very low air speed. Once attached, use (much) more flux and high air speed. Make balls look shiny. Clean with IPA.
-TODO: elaborate further.
-![20250131_215003](https://github.com/user-attachments/assets/53523f33-e50f-41f6-83f9-d19e86d7bca9)
+<img width="934" height="971" alt="reballed" src="https://github.com/user-attachments/assets/f0ec32ae-90f8-47e5-9958-c56a111d74c4" />
 
 ## Soldering the interposer
-Remove the tape from the aligntool and verify that it placing it in between the capacitors along its edge positions the PCB properly. If so, it's time to solder the interposer.   
-Apply a small layer of flux on the BGA pads and use a brush or your finger (wear gloves, e.g. nitrile) to distribute a very thin layer. Note that more flux is not benficial: it increases likeliness for balls to travel during reflow.
+Remove the tape from the aligntool and verify that it placing it in between the capacitors along its edge positions the PCB properly. If so, it's time to solder the interposer.
+Apply a small layer of flux on the BGA pads and use a brush or your finger (wear gloves, e.g. nitrile) to distribute a very thin layer. Note that more flux is not beneficial: it increases likelihood for balls to travel during reflow.
 ![20250131_214831](https://github.com/user-attachments/assets/de0e4886-6f03-4abe-9c72-56dbc6509fe7)
 ![20250131_214911](https://github.com/user-attachments/assets/970ffb86-235d-4e0b-9222-2814b1a137ce)
 
@@ -259,7 +257,7 @@ The main idea here is to have the board temperature attempt to follow the recomm
 After the profile finishes, allow the board to cool down for about 10 minutes before continuing to work on it.
 
 ## Intermediate checks
-At this point clearly the Xbox cannot boot, but there are a few things we should verify to ensure we're good to carry on.
+At this point clearly the XBOX cannot boot, but there are a few things we should verify to ensure we're good to carry on.
 Briefly remove the GPU heat shielding tape from both sides of the board before performing these measurements.
 
 On the interposer, measure the following using a digital multimeter:
@@ -268,18 +266,18 @@ On the interposer, measure the following using a digital multimeter:
  - VTT   --> ~50 ohms stable
 ![pcbnew_oaYOb1aO3B](https://github.com/user-attachments/assets/d166882a-c723-43b4-b1d5-f4e9757d27ca)
 
-If any of these read differently, the interposer is incorrectly aligned or a bridge has formed underneath it. It is then **pointless to continue**.  
+If any of these read differently, the interposer is incorrectly aligned or a bridge has formed underneath it. It is then **pointless to continue**.
 Remove the interposer and start fresh. In this case I always recommend return to stock state, with the original CPU.
 
 For non rev-1.6 boards, the next check is for the voltage rail powering the MCPX and XGPU:
  - VGPU: ~20 ohms, slowly rising -- measures 1.75V when powered on.
 Must be AT LEAST 2.5 ohms. If it reads <1 ohm the board has warped and a bridge has formed under the XGPU, or the XGPU has died from the heat. In most cases the board cannot be resurrected without transplanting or reballing the XGPU.
-![20250201_143008](https://github.com/user-attachments/assets/baea2f9e-1818-43a2-8823-94d44f287d67)  
+![20250201_143008](https://github.com/user-attachments/assets/baea2f9e-1818-43a2-8823-94d44f287d67)
 
-Finally, if these checks pass, turn on the Xbox. just the AV cord, PSU and front panel need to be connected.  
+Finally, if these checks pass, turn on the XBOX. just the AV cord, PSU and front panel need to be connected.
 
-We expect the Xbox to FRAG. Other outcomes: 
- - If the Xbox does not turn on: probably a short that needs to be resolved. Remove interposer and start over.
+We expect the XBOX to FRAG. Other outcomes:
+ - If the XBOX does not turn on: probably a short that needs to be resolved. Remove interposer and start over.
  - If front LED blinks orange and fans turn on at 100%: likely a bridge on some of the address lines. Remove interposer and start over.
 
 Put the aluminum tape back before continuing with the next steps.
@@ -289,9 +287,9 @@ Unless you obtained a prepopulated interposer, solder the components from the [B
 These are simple resistors and capacitors and should form no challenge if you're tackling a procedure like this.
 
 # Soldering the CPU
-We've arrived at the final step of the procedure: soldering the actual CPU.  
+We've arrived at the final step of the procedure: soldering the actual CPU.
 
-For some background info: the CPU sits on top of the interposer. While soldering the CPU, the do not wish to reflow the BGA balls which attach the interposer to the Xbox motherboard. To achieve this, we use a *Bismuth* soldering paste with lower melting temperature (138°C) than the leaded balls (183°C).
+For some background info: the CPU sits on top of the interposer. While soldering the CPU, we do not wish to reflow the BGA balls which attach the interposer to the XBOX motherboard. To achieve this, we use a *Bismuth* soldering paste with lower melting temperature (138°C) than the leaded balls (183°C).
 I personally like to use TS391LT from CHIPQUICK for this. The purple needle head works nicely for distributing a correct amount of paste pneumatically, but dispensing by hand is completely viable too.
 ![20250131_221951](https://github.com/user-attachments/assets/c2316fad-7e2b-4a51-81e3-db82656d94bd)
 
@@ -299,7 +297,7 @@ Pneumatic dispenser with foot pedal and timed bursts allows for placing the 370 
 ![20250131_222217](https://github.com/user-attachments/assets/ef86345c-0bce-4453-8bda-7c8c594e6b50)
 ![20250131_222928](https://github.com/user-attachments/assets/a32eb8df-8720-4f56-bb8f-f60631e7cd2d)
 
-Now place your CPU centered in the blobs. Try to be as accuratele as possible when initially setting it down. If adjustments are needed, lift the CPU slightly instead of shoving while the pins still make contact with the interposer. 
+Now place your CPU centered in the blobs. Try to be as accurate as possible when initially setting it down. If adjustments are needed, lift the CPU slightly instead of shoving while the pins still make contact with the interposer.
 
 Make sure alignment is good before placing the board onto your BGA machine.
 ![20250131_223116](https://github.com/user-attachments/assets/6067f519-0566-4e90-9769-765a3180b6a9)
@@ -308,7 +306,7 @@ Make sure alignment is good before placing the board onto your BGA machine.
 Starting point for the BGA profile for the CPU with Bi57 paste:
 ![20250131_223323](https://github.com/user-attachments/assets/341adf83-c0dc-466a-9c9c-015c3cade21e)
 
-Again, adapt to your situation. When the paste melts, the effect of the paste *cuddling* up onto the CPU pins is quite pleasing to watch.
+Again, adapt to your situation. When the paste melts, the effect of the paste *creeping* up onto the CPU pins is quite pleasing to watch.
 
 I like to use a 60x60mm nozzle which is able to get all the pins to melting temperature roughly at the same time.
 ![20250131_223353](https://github.com/user-attachments/assets/79eec532-39ce-46b6-b997-9c071b35e71e)
@@ -316,13 +314,13 @@ I like to use a 60x60mm nozzle which is able to get all the pins to melting temp
 Again, wait about 10 minutes after the profile completes before handling the board so as to not unnecessarily stress it or induce potential warping.
 
 ## Testing
-At this point, the Xbox should boot! Inspect the pins to ensure all paste has melted and no bridges have formed. Remove the GPU heat shielding tape once more.
+At this point, the XBOX should boot! Inspect the pins to ensure all paste has melted and no bridges have formed. Remove the GPU heat shielding tape once more.
 ![20250131_224609](https://github.com/user-attachments/assets/0a7134a7-b863-410a-9c84-923ac091cde4)
 
-If so, power it on and keep your fingers crossed.  If you get a boot logo, turn off the Xbox. The CPU is still operating at 1.70V but it's intended for only 1.45V, so we'll address that next.
+If so, power it on and keep your fingers crossed. If you get a boot logo, turn off the XBOX. The CPU is still operating at 1.70V but it's intended for only 1.45V, so we'll address that next.
 ![20250131_225238](https://github.com/user-attachments/assets/ad402328-bc5c-44a1-921f-5881708fc5ff)
 
-If the xbox boots, congratulations, you have performed potentially one of the toughest console mods out there.  
+If the XBOX boots, congratulations, you have performed potentially one of the toughest console mods out there.
 
 ### Troubleshooting
 If it does not boot, unfortunately, not a lot of diagnosis other than what was mentioned in the _Intermediate checks_ section is possible. A thermal cam could reveal potential shorts.
@@ -347,11 +345,11 @@ TODO
 
 ** For 121 boards (rev 1.6)
 ![Inner](https://github.com/user-attachments/assets/e54d0cc5-7996-4ec6-9aff-5704fac8a998)
-(picture courtesy of @RedHerring32
+(picture courtesy of @RedHerring32)
 
 
 ## Setting CPU VCORE
-The original CPU ran at 1.70V while the Tualatin replacement is intended to run at 1.45V. You can usually go a bit lower even, which helps to generate less heat, at the cost of potential stability. 
+The original CPU ran at 1.70V while the Tualatin replacement is intended to run at 1.45V. You can usually go a bit lower even, which helps to generate less heat, at the cost of potential stability.
 This can only be found out by trial and error; some run fine at 1.35V while others won't allow to go below 1.40V at all. This is evidenced by the console hanging unexpectedly during gameplay or even during the flutter bootup animation.
 The [ACE-AU github](https://github.com/ACE-AU/OGX-PIII-CPU-VCORE-SETTINGS) contains detailed information for each of the board revisions.
 
@@ -359,15 +357,15 @@ The [ACE-AU github](https://github.com/ACE-AU/OGX-PIII-CPU-VCORE-SETTINGS) conta
 # CPU/GPU heatsink bracket
 Due to the form factor difference, we cannot secure the original heatsinks to the CPU and GPU using the original bracket. Instead we use a 3d printed modified version which allows us to clamp the original heatsinks in place.
 https://github.com/ACE-AU/OG-Xbox-CPU-GPU-Heatsink-brackets-for-Franks-Interposer
-Alternatively, eBay seller [computerbooter](https://www.ebay.com/str/computerbooter916) sells these brackets cheaply.  
+Alternatively, eBay seller [computerbooter](https://www.ebay.com/str/computerbooter916) sells these brackets cheaply.
 
-To mount them, reuse the 5 clips and push pins from the original bracket. The one near pin 1 of the CPU needs to be clipped to fit, which is easily done using side cutters. 
+To mount them, reuse the 5 clips and push pins from the original bracket. The one near pin 1 of the CPU needs to be clipped to fit, which is easily done using side cutters.
 ![20250201_121645](https://github.com/user-attachments/assets/c69376e3-58f2-41ab-a265-b4b6590a4fd7)
 
-The original heatsink is slightly too high to sit under the standard HDD tray. You must trim at least 5.5mm off the top of the fins to make it fit.  
+The original heatsink is slightly too high to sit under the standard HDD tray. You must trim at least 5.5mm off the top of the fins to make it fit.
 
 ## Capacitor relocation on rev 1.6 motherboard
-On revision 1.6 motherboards, one electrolyic capacitor which sits between the fan and heatsink bracket needs to be moved slightly. After desoldering it, I mount the bracket and lay the capacitor flat on its side before attaching the snipped-off legs from an LED or another capacitor to its anode/kathode. Do keep attention to its marking since these are polarized!
+On revision 1.6 motherboards, one electrolyic capacitor which sits between the fan and heatsink bracket needs to be moved slightly. After desoldering it, I mount the bracket and lay the capacitor flat on its side before attaching the snipped-off legs from an LED or another capacitor to its anode/cathode. Do pay attention to its marking since these are polarized!
 ![20250203_213918](https://github.com/user-attachments/assets/ccc2ad2f-7c3f-4a0e-8c78-fc0353e236b5)
 
 
@@ -376,7 +374,7 @@ If acquiring a 3d-printed bracket is infeasible then several alternative solutio
 
 ### Thermal glue/adhesive
 This method is very easy to apply: simply apply thermal glue to the CPU, then place the heatsink on top. This forms a permanent bond which probably destroys the install if you attempt to ever remove it. This way you do not require any kind of mounting bracket, clamping solution, or screw holes solution.
-You could then use a smaller heatsink such as this [low-profile one](https://nl.rs-online.com/web/p/heatsinks/1898628) from Fischer Elektronik, which fits underneath the HDD tray. It is is easily cut up into 3 parts and therefore relatively cheap.
+You could then use a smaller heatsink such as this [low-profile one](https://nl.rs-online.com/web/p/heatsinks/1898628) from Fischer Elektronik, which fits underneath the HDD tray. It is easily cut up into 3 parts and therefore relatively cheap.
 ![20220812_155553](https://github.com/user-attachments/assets/429d0e06-0f76-40f9-a83e-9d2e60fe7781)
 
 Although thermal glue has way worse conductive properties than thermal paste, decent results can be obtained. [EC360](https://www.coolsierra.com/collections/thermal-adhesive/products/ec360-glue) in particular has given me passable results in the past.
@@ -389,6 +387,6 @@ Another option involves cutting the fins on the heatsink to make room for screw 
 ![20220831_003132](https://github.com/user-attachments/assets/aee1e84e-554b-4700-888c-873e82a6d943)
 
 ## Fan recommendation
-The upgraded CPUs use a lot more power than the original one, up to 30-35W, whereas the original one was closer to 25W. Poor heatsink solutions will cause the CPU to run quite hot. It's important that the temperature remains (well) below their maximum safe operating temperature of 85°C.  
-Many have opted to replace the somewhat noisy stock fan with a lower RPM one such as 50mm Noctua's, but this is ill advised. The silent operation is mostly achieved through lower fan speed and thereby lower airflow, but these CPUs require adequate cooling. My recommendation is to use good thermal paste, properly applied, along with the stock fan operating at >70% fan speed. This should keep temperatures under 60°C even during prolonged use.
+The upgraded CPUs use a lot more power than the original one, up to 30-35W, whereas the original one was closer to 25W. Poor heatsink solutions will cause the CPU to run quite hot. It's important that the temperature remains (well) below their maximum safe operating temperature of 85°C.
+Many have opted to replace the somewhat noisy stock fan with a lower RPM one such as 50mm Noctuas, but this is ill advised. The silent operation is mostly achieved through lower fan speed and thereby lower airflow, but these CPUs require adequate cooling. My recommendation is to use good thermal paste, properly applied, along with the stock fan operating at >70% fan speed. This should keep temperatures under 60°C even during prolonged use.
 
